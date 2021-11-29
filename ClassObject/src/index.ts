@@ -31,3 +31,5 @@ import "./interface/User";
 import "./property/Teacher";
 
 import "./property/Frutes";
+
+import "./fanxing/Fn";
