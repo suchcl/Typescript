@@ -26,3 +26,8 @@ cat.catchMice();  //捉了一只大老鼠！
 
 // 接口 interface
 import "./interface/User";
+
+// 属性封装
+import "./property/Teacher";
+
+import "./property/Frutes";
