@@ -45,6 +45,12 @@ class Cat extends Animal {
     catchMice(){
         console.log("捉了一只大老鼠！");
     }
+
+    // 实现父类的抽象方法
+    introBySelf(){
+        console.log("自我介绍");
+        
+    }
 }
 
 export { Cat };

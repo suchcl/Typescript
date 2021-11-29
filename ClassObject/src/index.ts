@@ -23,3 +23,6 @@ Dog.bark();
 const cat = new Cat("阿伟", 4, "male");
 cat.sayHello(); // 我们一起学猫叫，我们一起喵喵喵
 cat.catchMice();  //捉了一只大老鼠！
+
+// 接口 interface
+import "./interface/User";
