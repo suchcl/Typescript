@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2015",
+        "strict": true,
+        "noEmitOnError": true
+    },
+    // "include": ["./src/**/*"]  // 这些简单的配置，如果配合使用了webpack，就从webpack中配置
+}
