@@ -9,7 +9,8 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
         environment: {
-            arrowFunction: false // webpack打包，不要使用箭头函数形式
+            arrowFunction: false, // webpack打包，不要使用箭头函数形式
+            const: false
         }
         // clean: true
     },
