@@ -1,66 +1,68 @@
 @base-color: #b7d4a8;
 @color-black: #000;
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 #main {
-    background-color: @base-color;
-    width: 360px;
-    height: 420px;
-    margin: 100px auto 0;
-    border: 10px solid @color-black;
-    border-radius: 20px
+  background-color: @base-color;
+  width: 360px;
+  height: 420px;
+  margin: 100px auto 0;
+  border: 10px solid @color-black;
+  border-radius: 20px;
 }
 
 #stage {
-    position: relative;
-    width: 304px;
-    height: 304px;
-    margin: 20px auto 0;
-    border: 2px solid @color-black;
-    
-    #snake {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        background-color: @color-black;
-        border: 1px solid @base-color;
+  position: relative;
+  width: 304px;
+  height: 304px;
+  margin: 20px auto 0;
+  border: 2px solid @color-black;
+
+  #snake {
+    & > div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: @color-black;
+      border: 1px solid @base-color;
     }
+  }
 
-    #food{
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        left: 40px;
-        top: 80px;
+  #food {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 40px;
+    top: 80px;
 
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
 
-        & > div {
-            width: 4px;
-            height: 4px;
-            background-color: @color-black;
-            transform: rotate(45deg);
-        }
+    & > div {
+      width: 4px;
+      height: 4px;
+      background-color: @color-black;
+      transform: rotate(45deg);
     }
+  }
 }
 
 #sore-panel {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 20px;
+  .tb {
     display: flex;
-    // justify-content: space-between;
-    padding-top: 20px;
-    .tb {
-        display: flex;
-        line-height: 32px;
-        padding-left: 20px;
-        .th {
-            font-weight: bold;
-            font-size: 16px;
-        }
+    line-height: 32px;
+    padding-left: 20px;
+    .th {
+      font-weight: bold;
+      font-size: 16px;
     }
+  }
 }

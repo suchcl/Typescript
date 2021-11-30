@@ -26,8 +26,8 @@ class GameControl {
 
     init() {
         // 初始化的时候让蛇动起来
+        // document.addEventListener("keydown", this.keydownHandler.bind(this));
         document.addEventListener("keydown", this.keydownHandler.bind(this));
-
         // 调用run方法，让蛇移动起来
         this.run();
     }
@@ -51,8 +51,8 @@ class GameControl {
          */
 
         // 获取蛇现在的坐标
-        let x = this.snake.X;
-        let y = this.snake.Y;
+        let X = this.snake.X;
+        let Y = this.snake.Y;
         
 
         // 根据按键方向，修改x和y值，但是并没有生效
@@ -60,33 +60,33 @@ class GameControl {
             case "ArrowUp":
             case "Up":
                 // 向上移动，Y减小
-                y -= 10;
+                Y -= 10;
                 break;
             case "ArrowDown":
             case "Down":
                 // 向下移动，y增加
-                y += 10;
+                Y += 10;
                 break;
             case "ArrowLeft":
             case "Left":
                 // 向左移动，x减小
-                x -= 10;
+                X -= 10;
                 break;
             case "ArrowRight":
             case "Right":
                 // 向右移动，x增大
-                x += 10;
+                X += 10;
                 break;
         }
 
         // 检查蛇是否吃到了食物
-        this.checkEat(x, y);
+        this.checkEat(X, Y);
 
         // 修改蛇头的位置
         // 因为在snake中，是在修改x和y的时候抛出了异常，所以在这里捕获一下就可以了
         try {
-            this.snake.X = x;
-            this.snake.Y = y;
+            this.snake.X = X;
+            this.snake.Y = Y;
         } catch (e) {
             // 捕获到游戏异常，游戏结束
             alert(e);
