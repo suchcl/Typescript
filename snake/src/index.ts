@@ -1,8 +1,8 @@
 import "./assets/less/main";
-import Snake from "./modules/Snake";
+import GameControl from "./modules/GameControl";
 
-const snake =new Snake();
+new GameControl();
 
-document.getElementById("btn")?.addEventListener("click", function () {
-    snake.addBody();
-});
+// setInterval(() => {
+//     console.log(gc.direction);
+// }, 1000);

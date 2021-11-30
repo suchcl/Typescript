@@ -1,7 +1,7 @@
 // 计分面板
 class ScorePanel {
     private score = 0;
-    private level = 1;
+    private _level = 1;
 
     // 最大的等级限制
     private maxLevel:number;
@@ -32,13 +32,17 @@ class ScorePanel {
         }
     }
 
+    get level(){
+        return this._level;
+    }
+
     /**
      * 等级提升
      * 实际场景中，我们在设计用户等级时，都会设计用户的最高等级
      */
     upLevel() {
-        if (this.level < this.maxLevel) {
-            this.levelElement.innerText = ++this.level + "";
+        if (this._level < this.maxLevel) {
+            this.levelElement.innerText = ++this._level + "";
         }
     }
 }
