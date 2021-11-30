@@ -40,7 +40,6 @@ class Snake {
         // 修改X时，是在修改水平坐标，是在控制蛇的左右移动，当蛇向左移动时，不能向右掉头，反之亦然
         // 当只有蛇头时，不算是掉头的
         if(this.bodies[1] && (this.bodies[1] as HTMLElement).offsetLeft === value){
-            console.log("水平方向掉头了");
             // 如果发生了掉头，让蛇向反方向继续移动
             if(value > this.X){
                 // 如果新值大于旧值X，则说明蛇在向右移动，如果此时发生掉头，则应该让蛇继续向左移动
@@ -72,7 +71,6 @@ class Snake {
         // 修改y时，是在修改垂直坐标，是在控制蛇的上下移动，当蛇向上移动时，不能向下掉头，反之亦然
         // 当只有蛇头时，不算是掉头的
         if(this.bodies[1] && (this.bodies[1] as HTMLElement).offsetTop === value){
-            console.log("垂直方向掉头了");
             // 如果发生了掉头，让蛇向反方向继续移动
             if(value > this.Y){
                 // 如果新值大于旧值Y，则说明蛇在向下移动，如果此时发生掉头，则应该让蛇继续向上移动
