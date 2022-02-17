@@ -3,12 +3,20 @@ enum Role{
     Reporter = 200,
     developer = 206,
     Maintainer = 300,
-    Owner,
-    Guest
+    Owner = 1207,
+    Guest = 1216
 }
-console.log(Role.Reporter);
-console.log(Role.developer);
-console.log(Role.Maintainer);
+
+function initByRole(role:Role){
+    if(role === Role.Reporter){
+        // do sth
+    }else if(role === Role.developer || role === Role.Maintainer){
+        // do sth
+    }else{
+        // do sth
+    }
+}
+
 
 
 
