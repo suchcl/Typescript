@@ -23,9 +23,6 @@ console.log(t);
 console.log(t[2]);
 // console.log(t[3]);
 
-
-
-
 // 函数
 let add = (x:number,y:number):number => x + y;
 
@@ -59,6 +56,10 @@ console.log(obj.x); // 12
 // symbol
 let s1:symbol = Symbol();
 let s2 = Symbol();
+console.log("s1:", s1);
+console.log(s1 === s2); // false
+
+
 
 // 多种数据类型，可以为变量dt声明了多种数据类型，可以为string类型值也可以为number类型值
 let dt:string | number = 2;
@@ -66,3 +67,17 @@ dt = "hello";
 
 let username: string | number = "";
 username = 625;
+
+
+
+
+// let ud:undefined = 23;
+let udf:undefined = undefined;
+
+let n:null = null;
+// let nl: null = 12;
+
+
+
+let nu:string = null;
+let nn:number = undefined;

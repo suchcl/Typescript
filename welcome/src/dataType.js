@@ -49,3 +49,5 @@ var dt = 2;
 dt = "hello";
 var username = "";
 username = 625;
+
+console.log(void 0); // undefined
