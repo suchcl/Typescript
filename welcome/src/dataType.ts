@@ -81,3 +81,11 @@ let n:null = null;
 
 let nu:string = null;
 let nn:number = undefined;
+
+let error = () => {
+    throw new Error("error");
+}
+
+let endless = () => {
+    while(1){} // 永远不会有返回值
+}
