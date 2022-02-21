@@ -149,3 +149,15 @@ function add2(x:number,y?:number){
 
 console.log(add2(3,4)); // 7
 console.log(add2(9)); // 9
+
+function add3(x:number, y = 2, z:number,q = 3){
+    return x + y + z + q;
+}
+console.log(add3(1,2,3,4)); // 10
+
+console.log(add3(3,undefined,2,9)); // 16
+
+function add4(x:number,...rest:number[]){
+    return x + rest.reduce((pre,cur) => pre + cur);
+}
+console.log(add4(2,3,4)); // 9
