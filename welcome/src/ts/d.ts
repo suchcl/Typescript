@@ -22,3 +22,9 @@ function splice(param:unknown){
 }
 console.log(splice("hello"));
 // console.log(splice(10));
+
+
+
+
+let arr:number[] = [1,2,3];
+arr.push("hello");

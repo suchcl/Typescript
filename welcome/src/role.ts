@@ -1,12 +1,12 @@
-function initByRole(role:any){
-    if(role === 1){
-        // do sth
-    }else if(role === 2 || role === 3){
-        // do sth
-    }else {
-        // do sth
-    }
-}
+// function initByRole(role:any){
+//     if(role === 1){
+//         // do sth
+//     }else if(role === 2 || role === 3){
+//         // do sth
+//     }else {
+//         // do sth
+//     }
+// }
 
 /**
  * 角色   枚举
