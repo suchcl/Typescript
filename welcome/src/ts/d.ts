@@ -20,11 +20,20 @@ let realName:string = `${firstName} ${lastName}`;
 function splice(param:unknown){
     return param as number / 2;
 }
-console.log(splice("hello"));
+// console.log(splice("hello"));
 // console.log(splice(10));
 
 
 
 
 let arr:number[] = [1,2,3];
-arr.push("hello");
+console.log(typeof arr); // object
+console.log(Array.isArray(arr)); // true
+console.log(arr instanceof(Array));
+
+
+let t:[number,string] = [12,"hello"];
+console.log(typeof t); // object
+console.log(Array.isArray(t)); // true,tuple在语言层面，也被认为是数组
+// console.log(t instanceof Tuple);  // tuple标红了，难道tuple不是ts中的关键字或者保留字？
+

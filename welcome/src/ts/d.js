@@ -15,5 +15,12 @@ var realName = "".concat(firstName, " ").concat(lastName);
 function splice(param) {
     return param / 2;
 }
-console.log(splice("hello"));
+// console.log(splice("hello"));
 // console.log(splice(10));
+var arr = [1, 2, 3];
+console.log(typeof arr); // object
+console.log(Array.isArray(arr)); // true
+console.log(arr instanceof (Array));
+var tuple = [12, "hello"];
+console.log(typeof tuple); // object
+console.log(Array.isArray(tuple)); // true,tuple在语言层面，也被认为是数组
