@@ -37,3 +37,15 @@ console.log(typeof t); // object
 console.log(Array.isArray(t)); // true,tuple在语言层面，也被认为是数组
 // console.log(t instanceof Tuple);  // tuple标红了，难道tuple不是ts中的关键字或者保留字？
 
+function add(a:number,b:number){
+    console.log(a + b);
+}
+
+let sum2 = add(2,3);
+console.log(sum2);
+
+let inc = (a:number,b:number) => a + b;
+
+console.log(inc(3,4));
+
+
