@@ -79,7 +79,8 @@ var add17 = function (x, y, z) {
     }
 };
 console.log(add17(1, 2));
-function add18(a, b, c) {
-    console.log(a + b + c);
+function add18(x, y) {
+    if (y === void 0) { y = 2; }
+    return x + y;
 }
-add18(1, 2);
+console.log(add18(3));

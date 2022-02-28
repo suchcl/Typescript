@@ -60,3 +60,20 @@ function add3(a, b) {
 add3(1, 2) // 3
 add3(3); // NaN
 add3(4, 5, "hello"); // 9,多余的参数被忽略
+
+var count = 0;
+function counter(step) {
+    step = step || 0;
+    count += step;
+    return count;
+}
+counter(3);
+// console.log(counter(3));
+
+var count2 = 3;
+function counter2(step = 2) {
+    count2 += step;
+    return count2;
+}
+console.log(counter2(2));
+
