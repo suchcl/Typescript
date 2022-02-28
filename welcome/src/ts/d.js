@@ -67,3 +67,19 @@ var add12 = function (x, y) { return x + y; };
 console.log(add12(2, 3));
 var add13 = function (x, y) { return x + y; };
 console.log(add13(4, 5));
+var add14 = function (a, b) { return a + b; };
+// console.log(add14(4,6));
+var add15 = function (x, y) { return x + y; };
+var add17 = function (x, y, z) {
+    if (z) {
+        return x + y + z;
+    }
+    else {
+        return x + y;
+    }
+};
+console.log(add17(1, 2));
+function add18(a, b, c) {
+    console.log(a + b + c);
+}
+add18(1, 2);

@@ -123,4 +123,27 @@ console.log(add13(4,5));
 
 type Add14 = (x:number,y:number) => number;
 const add14:Add14 = (a:number,b:number) => a + b;
-console.log(add14(4,6));
+// console.log(add14(4,6));
+const add15:Add14 = (x:number,y:number) => x + y;
+// 下面3个都是错误的，
+// add15(3);
+// add15("hello",12);
+// add15(12,10,3);
+// 只有下面的调用时正确的
+// add15(4,6);
+
+// interface Add16{
+//     (x:number,y:number,z?:number):number
+// }
+// const add16:Add16 = (x:number,y:number,z?:number) => x + y + z;
+// add16(1,2,3);
+
+type Add17 = (x:number,y:number,z?:number) => number;
+let add17:Add17 = (x:number,y:number,z?:number) => {
+    if(z){
+        return x + y + z;
+    }else{
+        return x + y;
+    }
+}
+console.log(add17(1,2));

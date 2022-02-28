@@ -52,4 +52,11 @@ let func = (value, num) => ({
     total: value * num
 });
 
-console.log(func(2, 34));
+// console.log(func(2, 34));
+
+function add3(a, b) {
+    console.log(a + b);
+}
+add3(1, 2) // 3
+add3(3); // NaN
+add3(4, 5, "hello"); // 9,多余的参数被忽略
