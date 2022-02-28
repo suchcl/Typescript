@@ -93,8 +93,34 @@ console.log(userInfo(12,"Nicholas Zakas", 16));
 // let increment:(x:number,y:number) => number = (x:number,y:number) => x + y;
 // console.log(increment(5,6));
 
-interface Increment {
-    (x:number,y:number):number
+// interface Increment {
+//     (x:number,y:number):number
+// }
+// let icr:Increment = (x:number,y:number) => x + y;
+// console.log(icr(3,4)); // 7
+
+type Increment = (x:number,y:number) => number;
+let icr:Increment = (x:number,y:number) => x * y;
+console.log(icr(2,5));
+
+function incc(x:number,y:number):number{
+    return x + y;
 }
-let icr:Increment = (x:number,y:number) => x + y;
-console.log(icr(3,4)); // 7
+
+
+const add11 = (x:number,y:number):number => x + y;
+console.log(add11(1,2)); // 3
+
+const add12:(a:number,b:number) => number = (x:number,y:number)=> x + y;
+console.log(add12(2,3));
+
+interface Add13{
+    (a:number,b:number):number
+}
+const add13:Add13 = (x:number,y:number) => x + y;
+console.log(add13(4,5));
+
+
+type Add14 = (x:number,y:number) => number;
+const add14:Add14 = (a:number,b:number) => a + b;
+console.log(add14(4,6));

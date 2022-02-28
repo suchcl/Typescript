@@ -56,5 +56,14 @@ var userInfo = function (id, name, age) {
     };
 };
 console.log(userInfo(12, "Nicholas Zakas", 16));
-var icr = function (x, y) { return x + y; };
-console.log(icr(3, 4));
+var icr = function (x, y) { return x * y; };
+console.log(icr(2, 5));
+function incc(x, y) {
+    return x + y;
+}
+var add11 = function (x, y) { return x + y; };
+console.log(add11(1, 2)); // 3
+var add12 = function (x, y) { return x + y; };
+console.log(add12(2, 3));
+var add13 = function (x, y) { return x + y; };
+console.log(add13(4, 5));
