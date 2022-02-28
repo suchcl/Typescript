@@ -35,6 +35,26 @@ var inc = function (a, b) { return a + b + c3; };
 console.log(inc(3, 4));
 var z = 5;
 function add2(x, y) {
-    return x + y + z;
+    return (x + y + z).toString();
 }
-console.log(add2(2, 4));
+console.log(add2(2, 4)); // 11
+console.log(typeof add2(2, 4)); // string
+var adss = function (x, y) {
+    return x + y;
+};
+var add5 = function (a, b) {
+    return a + b;
+};
+var add6;
+add6 = function (x, y) { return x + y; };
+console.log(add6(3, 4));
+var userInfo = function (id, name, age) {
+    return {
+        id: id,
+        name: name,
+        age: age
+    };
+};
+console.log(userInfo(12, "Nicholas Zakas", 16));
+var icr = function (x, y) { return x + y; };
+console.log(icr(3, 4));

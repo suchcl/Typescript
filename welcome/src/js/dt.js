@@ -19,3 +19,37 @@ console.log(ad(2, 3));
 var z = 10;
 const add2 = (x, y) => x + y + z;
 console.log(add2(1, 3));
+
+(x, y) => {
+    return x + y;
+}
+
+var a1 = function (x, y) {
+    return x + y;
+};
+
+// (a, b) => sum = function () {
+//     return a + b;
+// };
+// console.log(sum(1, 2));
+
+// let func = value => value;
+
+// function func(value) {
+//     return value;
+// }
+
+// let func = (value, num) => value * num;
+
+// function func(value, num) {
+//     return value * num;
+// }
+
+
+let func = (value, num) => ({
+    value: 12,
+    num: 8,
+    total: value * num
+});
+
+console.log(func(2, 34));

@@ -51,6 +51,50 @@ console.log(inc(3,4));
 
 let z:number = 5;
 function add2(x:number,y:number){
-    return x + y + z;
+    return (x + y + z).toString();
 }
-console.log(add2(2,4));
+console.log(add2(2,4)); // 11
+console.log(typeof add2(2,4)); // string
+
+
+var adss:((x:number,y:number) => number) = function(x:number,y:number):number{
+    return x+y;
+}
+
+const add5 = (a:number,b:number):number => {
+    return a+b;
+}
+
+let add6:(a:number,b:number) => number;
+add6 = (x:number,y:number) => x + y;
+console.log(add6(3,4));
+
+
+interface User{
+    id:number,
+    name: string,
+    age: number
+}
+
+const userInfo:(id:number,name:string,age:number) => User = (id:number,name:string,age:number):User => {
+    return {
+        id,
+        name,
+        age
+    }
+}
+
+console.log(userInfo(12,"Nicholas Zakas", 16));
+
+// let increment:(x:number,y:number) => number;
+// increment = (x:number,y:number):number => x + y;
+// console.log(increment(2,3));
+
+// let increment:(x:number,y:number) => number = (x:number,y:number) => x + y;
+// console.log(increment(5,6));
+
+interface Increment {
+    (x:number,y:number):number
+}
+let icr:Increment = (x:number,y:number) => x + y;
+console.log(icr(3,4)); // 7
