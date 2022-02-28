@@ -79,8 +79,17 @@ var add17 = function (x, y, z) {
     }
 };
 console.log(add17(1, 2));
+// let add19:(x:number,y:number = 2) => number;
 function add18(x, y) {
     if (y === void 0) { y = 2; }
     return x + y;
 }
 console.log(add18(3));
+var handleData = function (arg) {
+    var args = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        args[_i - 1] = arguments[_i];
+    }
+    console.log(args);
+};
+handleData(1, 2, 3, 3, 4);

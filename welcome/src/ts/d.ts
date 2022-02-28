@@ -149,9 +149,14 @@ let add17:Add17 = (x:number,y:number,z?:number) => {
 console.log(add17(1,2));
 
 
-let add19:(x:number,y:number = 2) => number;
+// let add19:(x:number,y:number = 2) => number;
 
 function add18(x:number,y:number = 2){
     return x + y;
 }
 console.log(add18(3));
+
+const handleData = (arg:number,...args:number[]) => {
+    console.log(args);
+}
+handleData(1,2,3,3,4); // [ 2, 3, 3, 4 ]

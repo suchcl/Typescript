@@ -77,3 +77,7 @@ function counter2(step = 2) {
 }
 console.log(counter2(2));
 
+const handleData = (arg1, ...args) => {
+    console.log(args);
+}
+handleData(1, 2, 3, 4, 5); // [2, 3, 4, 5]
