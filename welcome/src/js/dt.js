@@ -8,3 +8,14 @@ if (s == s2) {
 
 // let sm = new Symbol("testSymbol");
 // console.log(sm);
+
+
+var c = 12;
+function ad(a, b) {
+    return a + b + c;
+}
+console.log(ad(2, 3));
+
+var z = 10;
+const add2 = (x, y) => x + y + z;
+console.log(add2(1, 3));
