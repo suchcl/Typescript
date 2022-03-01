@@ -85,11 +85,34 @@ function add18(x, y) {
     return x + y;
 }
 console.log(add18(3));
-var handleData = function (arg) {
-    var args = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        args[_i - 1] = arguments[_i];
+var message = [
+    {
+        id: 1,
+        type: "image",
+        sendmessage: "hello啊，今天去三里屯吧"
+    },
+    {
+        id: 2,
+        type: "audio",
+        sendmessage: "朝辞白帝彩云间，千里江陵一日还"
+    },
+    {
+        id: 3,
+        type: "audio",
+        sendmessage: "你好，张无忌"
+    },
+    {
+        id: 4,
+        type: "image",
+        sendmessage: "刘老根大舞台，绝对无级"
+    },
+    {
+        id: 5,
+        type: "image",
+        sendmessage: "王牌对王牌节目爆火了"
     }
-    console.log(args);
-};
-handleData(1, 2, 3, 3, 4);
+];
+var rst = message.filter(function (item) {
+    return item.type == "image";
+});
+console.log(rst);

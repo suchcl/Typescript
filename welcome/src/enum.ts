@@ -21,19 +21,19 @@ function initByRole(role:Role){
 
 
 // 字符串、常量枚举
-const enum Message{
-    Success = "恭喜您,您中大奖了!",
-    Fail = "很遗憾,本次没哟中奖"
-}
-console.log(Message.Success);
+// const enum Message{
+//     Success = "恭喜您,您中大奖了!",
+//     Fail = "很遗憾,本次没哟中奖"
+// }
+// console.log(Message.Success);
 
-// 异构枚举
-enum Answer {
-    N,
-    Y = "yes"
-}
+// // 异构枚举
+// enum Answer {
+//     N,
+//     Y = "yes"
+// }
 
-// 枚举成员
-enum Char{
+// // 枚举成员
+// enum Char{
 
-}
+// }

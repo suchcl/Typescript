@@ -38,20 +38,20 @@ let c:Color = Color.blue;
 console.log(c);
 
 
-const enum Message{
-    success = "恭喜成功发财",
-    failed = "不要气馁"
-}
+// const enum Message{
+//     success = "恭喜成功发财",
+//     failed = "不要气馁"
+// }
 
-enum Results{
-    success = "success",
-    failed = "failed"
-}
+// enum Results{
+//     success = "success",
+//     failed = "failed"
+// }
 
-function getTips(r:string){
-    if(r === Results.success){
-        console.log(Results.success);
-    }else {
-        console.log(Results.failed);
-    }
-}
+// function getTips(r:string){
+//     if(r === Results.success){
+//         console.log(Results.success);
+//     }else {
+//         console.log(Results.failed);
+//     }
+// }

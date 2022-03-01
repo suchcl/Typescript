@@ -156,7 +156,74 @@ function add18(x:number,y:number = 2){
 }
 console.log(add18(3));
 
-const handleData = (arg:number,...args:number[]) => {
-    console.log(args);
-}
-handleData(1,2,3,3,4); // [ 2, 3, 3, 4 ]
+// const handleData = (arg:number,...args:number[]) => {
+//     console.log(args);
+// }
+// handleData(1,2,3,3,4); // [ 2, 3, 3, 4 ]
+
+// const handleData = (x: string): number;
+// const handleData = (x: number): string;
+// const handleData = (x: null): number;
+// const handleData = (x: string | number | null):any => {
+//     if(typeof x === "string"){
+//         return Number(x);
+//     }
+//     if(typeof x === 'number'){
+//         return String(x);
+//     }
+//     return -1;
+// }
+// handleData(996);
+// handleData("996");
+// handleData(false);
+
+// function getUserinfo(name:string):string;
+// function getUserinfo(age:number):number;
+// function getUserinfo(name:string,age?:number):any{
+//     if(age){
+//         console.log(name+age);
+//     }else {
+//         console.log(name);
+        
+//     }
+// }
+// getUserinfo("Nicholas Zakas");
+
+type MessageType = "image" | "audio" | string; // 微消息类型
+type Message = {
+    id:number,
+    type: MessageType,
+    sendmessage: string
+};
+let message:Message[] = [
+    {
+        id:1,
+        type: "image",
+        sendmessage:"hello啊，今天去三里屯吧"
+    },
+    {
+        id:2,
+        type: "audio",
+        sendmessage: "朝辞白帝彩云间，千里江陵一日还"
+    },
+    {
+        id: 3,
+        type: "audio",
+        sendmessage: "你好，张无忌"
+    },
+    {
+        id: 4,
+        type: "image",
+        sendmessage: "刘老根大舞台，绝对无级"
+    },
+    {
+        id: 5,
+        type: "image",
+        sendmessage: "王牌对王牌节目爆火了"
+    }
+];
+let rst = message.filter((item) => {
+    return item.type == "image"
+});
+console.log(rst);
+
