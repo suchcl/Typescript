@@ -39,3 +39,36 @@ function identity<T,U>(key:T,msg:U):IDentities<T,U>{
 }
 
 console.log(identity(18,"Nicholas Zakas")); // { value: 18, message: 'Nicholas Zakas' }
+
+
+interface People<U>{
+    value:U,
+    getIdentity:() => U // 定义了一个变量，为函数类型，其实就是定义了一个函数，只是没有实现
+}
+
+class Student<T> implements People<T>{
+    value: T;
+    constructor(value:T){
+        this.value = value;
+    }
+
+    getIdentity():T{
+        return this.value;
+    }
+}
+
+const stu = new Student("Hanmeimei");
+console.log(stu); // Student { value: 'Hanmeimei' }
+console.log(stu.getIdentity()); // Hanmeimei
+
+class Police<T>{
+    key:T;
+    constructor(key:T){
+        this.key = key;
+    }
+    getKey():T{
+        return this.key;
+    }
+}
+const police = new Police("最可爱的人");
+console.log(police.getKey());
