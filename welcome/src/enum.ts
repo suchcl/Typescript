@@ -11,7 +11,7 @@ function initByRole(role:Role){
     if(role === Role.Reporter){
         // do sth
     }else if(role === Role.developer || role === Role.Maintainer){
-        // do sth
+        // do sth  eg
     }else{
         // do sth
     }
