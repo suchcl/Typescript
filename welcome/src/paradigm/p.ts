@@ -74,13 +74,47 @@
 // console.log(police.getKey()); // 最可爱的人
 
 
-interface ILength{
-    length: number
+// interface ILength{
+//     length: number
+// }
+
+// function identity<T extends ILength>(arg:T):T{
+//     console.log(arg.length);
+//     return arg;
+// }
+
+// console.log(identity("hello"));
+
+
+interface Person{
+    name:string;
+    age:number;
+    location: string
+}
+// type t2 = keyof Person;
+
+// function getProperty<T,K extends keyof T>(obj:T,key:K):T[K]{
+//     return obj[key];
+// }
+
+enum Difficulty{
+    Easy,
+    Intermediate,
+    Hard
+}
+function getProperty<T, K extends keyof T>(obj:T,key: K):T[K]{
+    return obj[key];
 }
 
-function identity<T extends ILength>(arg:T):T{
-    console.log(arg.length);
-    return arg;
-}
+let tsInfo = {
+    name: "Typescript",
+    supersetOf: "Javascript",
+    difficulty: Difficulty.Hard
+};
 
-console.log(identity("hello"));
+let asdasfaf:Difficulty = getProperty(tsInfo,"difficulty");
+console.log(asdasfaf);
+
+
+type Testrr<T> = T extends number ? 1 : 2;
+type resss = Testrr<1 | 'a'>;
