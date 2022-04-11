@@ -1,10 +1,9 @@
-// // function log(value: any): any {
-// //     console.log(value);
-// //     return value;
-// // }
-var myLog = function (value) {
-    console.log(value);
+// // // function log(value: any): any {
+// // //     console.log(value);
+// // //     return value;
+// // // }
+function log(value) {
+    console.log(value, value.length);
     return value;
-};
-myLog(15);
-myLog("Hello");
+}
+log("12");
