@@ -15,3 +15,12 @@ window.onkeydown = e => {
     console.log(e.altKey);
 
 }
+
+interface Foo {
+    bar: number
+}
+
+// let foo = {} as Foo;
+// foo.bar = 1;
+
+let foo: Foo = {};
