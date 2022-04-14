@@ -8,12 +8,10 @@ let arr = [1, 2, 3]; // 根据变量值推断为了number类型的数组
 
 window.onclick = event => {
     console.log(event.button);
-
 }
 
 window.onkeydown = e => {
     console.log(e.altKey);
-
 }
 
 interface Foo {
@@ -23,4 +21,6 @@ interface Foo {
 // let foo = {} as Foo;
 // foo.bar = 1;
 
-let foo: Foo = {};
+let foo: Foo = {
+    bar: 2
+};
