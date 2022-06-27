@@ -14,6 +14,6 @@ function doSth(p: string | undefined | null) {
 type NumberGenerator = () => number;
 
 function numberTypeConvert(numberGenertor: NumberGenerator | undefined) {
-    const num1 = numberGenertor();
+    // const num1 = numberGenertor();
     const num2 = numberGenertor!();
 }
