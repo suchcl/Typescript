@@ -15,3 +15,22 @@ function getName(n: NameOrResolver): Name {
         return n();
     }
 }
+
+getName("Nicholas");
+console.log(getName(() => {
+    const msg = "world!";
+    return "Hello " + msg;
+}));
+
+
+
+// getName(12);
+
+type Names = string;
+type arrItem = number | string;
+const arr: arrItem[] = [1, "2", 3];
+type Person = {
+    name: string
+};
+
+type Student = Person & { grade: number };
