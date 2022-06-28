@@ -48,3 +48,38 @@ const myTrunk: Trunk = {
 };
 evaluatePrice(myTrunk);
 
+
+type PartialPointX = { x: number };
+type Point = PartialPointX & { y: number };
+let point: Point = {
+    x: 10,
+    y: 12
+};
+
+interface X {
+    c: string;
+    d: string;
+}
+
+interface Y {
+    // c: number;
+    e: string;
+}
+
+type XY = X & Y;
+type YX = Y & X;
+let p: XY = {
+    c: "hello",
+    d: "world",
+    e: "!"
+};
+
+interface D {
+    d: boolean;
+}
+interface E {
+    e: string;
+}
+interface F {
+    f: number
+}
