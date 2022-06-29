@@ -83,3 +83,42 @@ interface E {
 interface F {
     f: number
 }
+
+
+type Name = string;
+type Person = {
+    name: Name
+};
+type Student = Person & { grade: number };
+type Teacher = Person & { major: string };
+type StudentAndTeacherList = [Student, Teacher];
+const list: StudentAndTeacherList = [
+    {
+        name: "Nicholas Zakas",
+        grade: 2
+    },
+    {
+        name: "谭浩强",
+        major: "Computer Science"
+    }
+];
+console.log(list[0].name, list[1].major);
+
+// 描述对象类型
+interface Points {
+    x: number;
+    y: number;
+}
+
+// 描述函数
+interface SetPoints {
+    (x: number, y: number): void;
+}
+
+// 类型别名来描述对象类型
+type Points2 = {
+    x: number;
+    y: number
+}
+// 类型别名描述函数约束
+type SetPoints2 = (x: number, y: number) => void;

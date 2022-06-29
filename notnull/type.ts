@@ -1,5 +1,5 @@
 // 为string类型起个别名：Name
-type Name = string;
+// type Name = string;
 
 // 为函数类型类型() => string起个别名NameResolve，定义一个返回string类型值的函数
 type NameResolve = () => string;
@@ -29,8 +29,8 @@ console.log(getName(() => {
 type Names = string;
 type arrItem = number | string;
 const arr: arrItem[] = [1, "2", 3];
-type Person = {
-    name: string
-};
+// type Person = {
+//     name: string
+// };
 
-type Student = Person & { grade: number };
+// type Student = Person & { grade: number };
