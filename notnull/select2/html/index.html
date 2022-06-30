@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select2 tags</title>
+    <link rel="stylesheet" href="../css/select2.min.css">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box {
+            width: 300px;
+            margin: 20px auto 0;
+            background-color: azure;
+        }
+        .select2 {
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            outline: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <select class="select2" multiple>
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">天津</option>
+        </select>
+    </div>
+    <script src="../../js/jquery.js"></script>
+    <script src="../js/select2.full.js"></script>
+    <script>
+        $(function(){
+            $(".select2").select2({
+                tags:true
+            });
+        });
+    </script>
+</body>
+</html>

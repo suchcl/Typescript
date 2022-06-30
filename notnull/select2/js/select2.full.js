@@ -2278,9 +2278,16 @@ S2.define('select2/selection/search',[
     var width = '100%';
 
     if (this.$search.attr('placeholder') === '') {
-      var minimumWidth = this.$search.val().length + 1;
+      // 输入关键字的长度
+      // var minimumWidth = this.$search.val().length + 1;
+      // 设置宽度为输入关键字长度的0.75倍的em宽度  这里
+      // width = (minimumWidth * 0.75) + 'em';
+      // width = minimumWidth + "em";
 
-      width = (minimumWidth * 0.75) + 'em';
+      var str = this.$search.val();
+      var width1 = str.replace(/[^\u4e00-\u9fa5]/gi, "").length * 2;
+      var width2 = str.replace(/[\u4e00-\u9fa5]/gi, "").length * .75;
+      width = (width1 + width2 + 1) + "em";
     }
 
     this.$search.css('width', width);
