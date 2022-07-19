@@ -111,7 +111,7 @@ enum Difficulty {
     Intermediate,
     Hard
 }
-function getProperty<T, K extends keyof T>(obj:T,key:K):T[K]{
+function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
     return obj[key];
 }
 
@@ -120,3 +120,34 @@ let tsInfo = {
     superSetof: "javascript",
     difficulty: Difficulty.Hard
 };
+
+// 定义数组的两种方式：1.类型后添加[];2.使用泛型数组
+let arr: string[] = []; // 类型后添加[]的方式创建数组
+
+let arrNew: Array<string> = []; // 通过泛型数组的方式创建数组
+let tuple: [string, number] = ["hello", 12];
+
+// enum Direction {
+//     NORTH,
+//     SOURTH,
+//     EAST = 10,
+//     WEST
+// };
+
+// let dir:Direction = Direction.EAST;
+// console.log(dir); // 2
+// console.log(Direction.EAST); // 10
+// console.log(Direction.WEST); // 11
+
+enum Locations{
+    WEST="WEST"
+}
+
+enum Direction {
+    NORTH = "NORTH",
+    SOURTH = "SOURTH",
+    EAST = "EAST",
+    WEST = 6
+}
+console.log(Direction.EAST);
+console.log(Direction.WEST);

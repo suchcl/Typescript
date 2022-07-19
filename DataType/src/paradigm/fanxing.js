@@ -52,8 +52,44 @@ function identity7(arg) {
     return arg;
 }
 console.log(identity7([3, 4]));
-var a = 1;
-(function a() {
-    a = 2;
-    console.log(a);
-})();
+var Difficulty;
+(function (Difficulty) {
+    Difficulty[Difficulty["Easy"] = 0] = "Easy";
+    Difficulty[Difficulty["Intermediate"] = 1] = "Intermediate";
+    Difficulty[Difficulty["Hard"] = 2] = "Hard";
+})(Difficulty || (Difficulty = {}));
+function getProperty(obj, key) {
+    return obj[key];
+}
+var tsInfo = {
+    name: "Typescript",
+    superSetof: "javascript",
+    difficulty: Difficulty.Hard
+};
+// 定义数组的两种方式：1.类型后添加[];2.使用泛型数组
+var arr = []; // 类型后添加[]的方式创建数组
+var arrNew = []; // 通过泛型数组的方式创建数组
+var tuple = ["hello", 12];
+// enum Direction {
+//     NORTH,
+//     SOURTH,
+//     EAST = 10,
+//     WEST
+// };
+// let dir:Direction = Direction.EAST;
+// console.log(dir); // 2
+// console.log(Direction.EAST); // 10
+// console.log(Direction.WEST); // 11
+var Locations;
+(function (Locations) {
+    Locations["WEST"] = "WEST";
+})(Locations || (Locations = {}));
+var Direction;
+(function (Direction) {
+    Direction["NORTH"] = "NORTH";
+    Direction["SOURTH"] = "SOURTH";
+    Direction["EAST"] = "EAST";
+    Direction[Direction["WEST"] = 12] = "WEST";
+})(Direction || (Direction = {}));
+console.log(Direction.EAST);
+console.log(Direction.WEST);
