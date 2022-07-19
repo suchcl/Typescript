@@ -104,11 +104,8 @@ var uk2 = uk;
 // let uk3:string = uk; // 这里将unknown类型值赋值给了string类型变量，会报错
 var tp = ["Nicholas Zakas", 16];
 console.log(tp);
-var user = {
-    name: "Nicholas Zakas",
-    age: 18
-};
-function getUser(user) {
-    return user;
-}
-console.log(getUser(user));
+var num2 = undefined;
+var str2 = null;
+var avalue = "Hello world!";
+var valueLength = avalue.length;
+console.log("valueLength:", valueLength);

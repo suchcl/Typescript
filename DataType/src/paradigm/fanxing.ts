@@ -167,5 +167,9 @@ let tp: [name: string, age: number] = ["Nicholas Zakas", 16];
 console.log(tp);
 
 
-let num2:number = undefined;
-let str2:string = null;
+let num2: number = undefined;
+let str2: string = null;
+
+let avalue: any = "Hello world!";
+let valueLength: number = (<string>avalue).length;
+let avalueLength: number = (avalue as string).length;
