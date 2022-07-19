@@ -89,7 +89,26 @@ var Direction;
     Direction["NORTH"] = "NORTH";
     Direction["SOURTH"] = "SOURTH";
     Direction["EAST"] = "EAST";
-    Direction[Direction["WEST"] = 12] = "WEST";
+    Direction[Direction["WEST"] = 6] = "WEST";
 })(Direction || (Direction = {}));
 console.log(Direction.EAST);
 console.log(Direction.WEST);
+var value = "hello";
+var nums = value;
+console.log(nums);
+var str = value;
+var isFlag = value;
+var uk = "world";
+var nuk = uk;
+var uk2 = uk;
+// let uk3:string = uk; // 这里将unknown类型值赋值给了string类型变量，会报错
+var tp = ["Nicholas Zakas", 16];
+console.log(tp);
+var user = {
+    name: "Nicholas Zakas",
+    age: 18
+};
+function getUser(user) {
+    return user;
+}
+console.log(getUser(user));

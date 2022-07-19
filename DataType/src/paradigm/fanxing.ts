@@ -139,8 +139,8 @@ let tuple: [string, number] = ["hello", 12];
 // console.log(Direction.EAST); // 10
 // console.log(Direction.WEST); // 11
 
-enum Locations{
-    WEST="WEST"
+enum Locations {
+    WEST = "WEST"
 }
 
 enum Direction {
@@ -151,3 +151,21 @@ enum Direction {
 }
 console.log(Direction.EAST);
 console.log(Direction.WEST);
+
+let value: any = "hello";
+let nums: number = value;
+console.log(nums);
+let str: string = value;
+let isFlag: boolean = value;
+
+let uk: unknown = "world";
+let nuk: any = uk;
+let uk2: unknown = uk;
+// let uk3:string = uk; // 这里将unknown类型值赋值给了string类型变量，会报错
+
+let tp: [name: string, age: number] = ["Nicholas Zakas", 16];
+console.log(tp);
+
+
+let num2:number = undefined;
+let str2:string = null;
