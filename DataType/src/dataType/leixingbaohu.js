@@ -25,5 +25,59 @@ function offsetLeft(value, padding) {
     }
     throw new Error("期望是一个string或者number类型值，但是得到的是" + padding);
 }
-console.log(offsetLeft("hello", "world"));
-console.log(offsetLeft("hello", 3));
+console.log(offsetLeft("hello", "world")); // worldhello
+console.log(offsetLeft("hello", 3)); // 3
+var SpaceRepeatingPadder = /** @class */ (function () {
+    function SpaceRepeatingPadder(numSpaces) {
+        this.numSpaces = numSpaces;
+    }
+    SpaceRepeatingPadder.prototype.getPaddingString = function () {
+        return this.numSpaces.toString();
+    };
+    return SpaceRepeatingPadder;
+}());
+var StringPadder = /** @class */ (function () {
+    function StringPadder(value) {
+        this.value = value;
+    }
+    StringPadder.prototype.getPaddingString = function () {
+        return this.value;
+    };
+    return StringPadder;
+}());
+var padder = new SpaceRepeatingPadder(100);
+if (padder instanceof SpaceRepeatingPadder) {
+    console.log("数字类型值");
+}
+function isFish(pet) {
+    return pet.swim !== undefined; // 判断pet是否具有swim属性
+}
+function isBird(pet) {
+    return pet.fly !== undefined;
+}
+function getPet(pet) {
+    if (isFish(pet)) {
+        pet.swim();
+    }
+    if (isBird(pet)) {
+        pet.fly();
+    }
+}
+var fish = {
+    swim: function () {
+        console.log("游泳了");
+    },
+    layEggs: function () {
+        console.log("小鱼生蛋了");
+    }
+};
+var pig = {
+    fly: function () {
+        console.log("猪会飞了");
+    },
+    layEggs: function () {
+        console.log("猪会生蛋了");
+    }
+};
+console.log(getPet(fish));
+console.log(getPet(pig));

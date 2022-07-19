@@ -72,3 +72,50 @@ const padder:Padder = new SpaceRepeatingPadder(100);
 if(padder instanceof SpaceRepeatingPadder){
     console.log("数字类型值");
 }
+
+// 自定义类型保护的类型谓词
+interface Bird{
+    fly();
+    layEggs();
+}
+
+interface Fish{
+    swim();
+    layEggs();
+}
+
+function isFish(pet:Fish | Bird):pet is Fish{
+    return (pet as Fish).swim !== undefined; // 判断pet是否具有swim属性
+}
+
+function isBird(pet:Fish | Bird):pet is Bird{
+    return (pet as Bird).fly !== undefined;
+}
+
+function getPet(pet: Fish | Bird){
+    if(isFish(pet)){
+        pet.swim();
+    }
+    if(isBird(pet)){
+        pet.fly();
+    }
+}
+
+let fish:Fish = {
+    swim(){
+        console.log("游泳了");
+    },
+    layEggs(){
+        console.log("小鱼生蛋了");
+    }
+}
+let pig:Bird = {
+    fly(){
+        console.log("猪会飞了");
+    },
+    layEggs(){
+        console.log("猪会生蛋了");
+    }
+};
+console.log(getPet(fish));
+console.log(getPet(pig));
