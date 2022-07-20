@@ -81,3 +81,49 @@ var pig = {
 };
 console.log(getPet(fish));
 console.log(getPet(pig));
+var v;
+v = "hello";
+v = 12;
+var sayHello = function (name) {
+    console.log(name);
+};
+// 可辨识联合
+var Cartransmission;
+(function (Cartransmission) {
+    Cartransmission[Cartransmission["Automatic"] = 200] = "Automatic";
+    Cartransmission[Cartransmission["Manual"] = 300] = "Manual";
+})(Cartransmission || (Cartransmission = {}));
+var EVALUATION_FACTOR = Math.PI;
+// function evaluatePrice(vehicle:Vehicle){
+//     return vehicle.capacity * EVALUATION_FACTOR;
+// }
+function evaluatePrice(vehicle) {
+    switch (vehicle.vType) {
+        case "car":
+            return vehicle.transmission * EVALUATION_FACTOR;
+        case "truck":
+            return vehicle.capacity * EVALUATION_FACTOR;
+        case "motorcycle":
+            return vehicle.make * EVALUATION_FACTOR;
+    }
+}
+var truck = {
+    vType: 'truck',
+    capacity: 10
+};
+var car = {
+    vType: 'car',
+    transmission: Cartransmission.Manual
+};
+console.log(evaluatePrice(car));
+function sayHaha(info) {
+    console.log(info);
+}
+console.log(sayHaha(["hello", "world", "!"])); // [ 'hello', 'world', '!' ]
+console.log(sayHaha("Hello")); // Hello
+var staff = {
+    id: 12,
+    age: 16,
+    companyId: "9823"
+};
+console.log(staff.age);
