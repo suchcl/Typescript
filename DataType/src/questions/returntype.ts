@@ -1,6 +1,6 @@
 // 实现ReturnType<T>泛型
 
-const fn = (v:boolean) => {
+const fns = (v:boolean) => {
     if(v){
         return 1;
     }else{
@@ -8,4 +8,4 @@ const fn = (v:boolean) => {
     }
 }
 
-type a = MyReturnType<typeof fn>;
+type a = ReturnType<typeof fns>;
